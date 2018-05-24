@@ -1,5 +1,27 @@
 #!/bin/bash
 
+n=`gpu-detect AMD`
+
+#pad arrays
+[[ ! -z $CORE_CLOCK ]] &&
+CORE_CLOCK=($CORE_CLOCK) &&
+for (( i=${#CORE_CLOCK[@]}; i < $n; ++i )); do
+        CORE_CLOCK[$i]=${CORE_CLOCK[$i-1]}
+done
+
+[[ ! -z $CORE_VDDC ]] &&
+CORE_VDDC=($CORE_VDDC) &&
+for (( i=${#CORE_VDDC[@]}; i < $n; ++i )); do
+    CORE_VDDC[$i]=${CORE_VDDC[$i-1]}
+done
+
+[[ ! -z $MEM_CLOCK ]] &&
+MEM_CLOCK=($MEM_CLOCK) &&
+for (( i=${#MEM_CLOCK[@]}; i < $n; ++i )); do
+        MEM_CLOCK[$i]=${MEM_CLOCK[$i-1]}
+done
+
+
 for (( i=0; i < $n; ++i )); do
 
 echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR} ${YELLOW}===${NOCOLOR}"
