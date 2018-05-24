@@ -58,24 +58,24 @@ tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp --set VddcL
 eval $tek
 
 # VddGfxLookupTable[0-7].Vdd
-echo -e "${YELLOW}VddGfxLookupTable[0-7].Vdd=${CORE_VDDC[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=0; j < 8; ++j )); do
-tek+=" --set VddGfxLookupTable.Entries[$j].Vdd=${CORE_VDDC[$i]}"
-done
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+#echo -e "${YELLOW}VddGfxLookupTable[0-7].Vdd=${CORE_VDDC[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#for (( j=0; j < 8; ++j )); do
+#tek+=" --set VddGfxLookupTable.Entries[$j].Vdd=${CORE_VDDC[$i]}"
+#done
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
-# MMDependencyTable[0-7].VddcGfxOffset=0
-echo -e "${YELLOW}MMDependencyTable[0-7].VddcGfxOffset=0${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=0; j < 8; ++j )); do
-tek+=" --set MMDependencyTable.Entries[$j].VddcGfxOffset=0"
-done
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+## MMDependencyTable[0-7].VddcGfxOffset=0
+#echo -e "${YELLOW}MMDependencyTable[0-7].VddcGfxOffset=0${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#for (( j=0; j < 8; ++j )); do
+#tek+=" --set MMDependencyTable.Entries[$j].VddcGfxOffset=0"
+#done
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
 # MemClockDependencyTable[0-1].Vddci
 echo -e "${YELLOW}MemClockDependencyTable[0-1].Vddci=${CORE_VDDC[$i]}${NOCOLOR}"
