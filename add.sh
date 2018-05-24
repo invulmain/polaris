@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+. colors
 
 AMD_OC_CONF="/hive-config/amd-oc.conf"
 
@@ -8,7 +10,6 @@ if [[ $n == 0 ]]; then
         echo "No AMD cards detected, exiting"
         exit
 fi
-echo "Detected $n AMD cards"
 
 if [ ! -f $AMD_OC_CONF ]; then
         echo -e "ERROR: $AMD_OC_CONF does not exist"
@@ -38,7 +39,7 @@ done
 
 
 
-for (( i=0; i < $n-6; ++i )); do
+for (( i=0; i < $n; ++i )); do
 
 echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR} ${YELLOW}===${NOCOLOR}"
 
