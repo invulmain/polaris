@@ -113,10 +113,10 @@ tek+=" --write-card-pp"
 #echo $tek
 eval $tek
 
-# SocClockDependencyTable[1-7].SocClock=115000
-echo -e "${YELLOW}SocClockDependencyTable[1-7].SocClock=${CORE_CLOCK[$i]}${NOCOLOR}"
+# SocClockDependencyTable[4-7].SocClock=115000
+echo -e "${YELLOW}SocClockDependencyTable[4-7].SocClock=${CORE_CLOCK[$i]}${NOCOLOR}"
 tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=1; j < 8; ++j )); do
+for (( j=3; j < 8; ++j )); do
 tek+=" --set SocClockDependencyTable.Entries[$j].SocClock=${CORE_CLOCK[$i]}00"
 done
 tek+=" --write-card-pp"
