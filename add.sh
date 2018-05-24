@@ -1,6 +1,21 @@
 #!/bin/bash
 
+AMD_OC_CONF="/hive-config/amd-oc.conf"
+
 n=`gpu-detect AMD`
+
+if [[ $n == 0 ]]; then
+        echo "No AMD cards detected, exiting"
+        exit
+fi
+echo "Detected $n AMD cards"
+
+if [ ! -f $AMD_OC_CONF ]; then
+        echo -e "ERROR: $AMD_OC_CONF does not exist"
+        exit
+fi
+
+source $AMD_OC_CONF
 
 #pad arrays
 [[ ! -z $CORE_CLOCK ]] &&
@@ -22,7 +37,8 @@ for (( i=${#MEM_CLOCK[@]}; i < $n; ++i )); do
 done
 
 
-for (( i=0; i < $n; ++i )); do
+
+for (( i=0; i < $n-6; ++i )); do
 
 echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR} ${YELLOW}===${NOCOLOR}"
 
