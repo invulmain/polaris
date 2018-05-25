@@ -77,51 +77,51 @@ eval $tek
 ##echo $tek
 #eval $tek
 
-# MemClockDependencyTable[0-1].Vddci
-echo -e "${YELLOW}MemClockDependencyTable[0-1].Vddci=${CORE_VDDC[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=0; j < 2; ++j )); do
-tek+=" --set MemClockDependencyTable.Entries[$j].Vddci=${CORE_VDDC[$i]}"
-done
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+## MemClockDependencyTable[0-1].Vddci
+#echo -e "${YELLOW}MemClockDependencyTable[0-1].Vddci=${CORE_VDDC[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#for (( j=0; j < 2; ++j )); do
+#tek+=" --set MemClockDependencyTable.Entries[$j].Vddci=${CORE_VDDC[$i]}"
+#done
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
 # MemClockDependencyTable[2].Vddci
-echo -e "${YELLOW}MemClockDependencyTable[2].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-tek+=" --set MemClockDependencyTable.Entries[2].Vddci=${CORE_VDDC[$i]}"
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+#echo -e "${YELLOW}MemClockDependencyTable[2].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#tek+=" --set MemClockDependencyTable.Entries[2].Vddci=${CORE_VDDC[$i]}"
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
-# MemClockDependencyTable[0-1].Mvdd
-echo -e "${YELLOW}MemClockDependencyTable[0-1].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=0; j < 2; ++j )); do
-tek+=" --set MemClockDependencyTable.Entries[$j].Mvdd=${CORE_VDDC[$i]}"
-done
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+## MemClockDependencyTable[0-1].Mvdd
+#echo -e "${YELLOW}MemClockDependencyTable[0-1].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#for (( j=0; j < 2; ++j )); do
+#tek+=" --set MemClockDependencyTable.Entries[$j].Mvdd=${CORE_VDDC[$i]}"
+#done
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
-# MemClockDependencyTable[2].Mvdd
-echo -e "${YELLOW}MemClockDependencyTable[2].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-tek+=" --set MemClockDependencyTable.Entries[2].Mvdd=${CORE_VDDC[$i]}"
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+## MemClockDependencyTable[2].Mvdd
+#echo -e "${YELLOW}MemClockDependencyTable[2].Mvdd=${CORE_VDDC[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#tek+=" --set MemClockDependencyTable.Entries[2].Mvdd=${CORE_VDDC[$i]}"
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
-# SocClockDependencyTable[4-7].SocClock=115000
-echo -e "${YELLOW}SocClockDependencyTable[4-7].SocClock=${CORE_CLOCK[$i]}${NOCOLOR}"
-tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-for (( j=3; j < 8; ++j )); do
-tek+=" --set SocClockDependencyTable.Entries[$j].SocClock=${CORE_CLOCK[$i]}00"
-done
-tek+=" --write-card-pp"
-#echo $tek
-eval $tek
+## SocClockDependencyTable[4-7].SocClock=115000
+#echo -e "${YELLOW}SocClockDependencyTable[4-7].SocClock=${CORE_CLOCK[$i]}${NOCOLOR}"
+#tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
+#for (( j=3; j < 8; ++j )); do
+#tek+=" --set SocClockDependencyTable.Entries[$j].SocClock=${CORE_CLOCK[$i]}00"
+#done
+#tek+=" --write-card-pp"
+##echo $tek
+#eval $tek
 
 done
 
