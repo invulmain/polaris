@@ -53,7 +53,7 @@ done
 for (( i=0; i < $n; ++i )); do
 
 echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR} ${YELLOW}===${NOCOLOR}"
-echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$i]}${NOCOLOR}"
+echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$i]} ${NOCOLOR}"
 
 tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
 tek+=" --set VddGfxLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
