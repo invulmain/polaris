@@ -53,11 +53,11 @@ done
 for (( i=0; i < $n; ++i )); do
 
 echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR} ${YELLOW}===${NOCOLOR}"
-echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$i]} ${NOCOLOR}"
+echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$i]}${NOCOLOR}"
 
 tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-tek+=" --set VddGfxLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
-tek+=" --set VddGfxLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
+tek+=" --set VddcLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
+tek+=" --set VddcLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
 tek+=" --set SocClockDependencyTable.Entries[7].SocClock=${CORE_CLOCK[$i]}00"
 tek+=" --set MemClockDependencyTable.Entries[${MEM_STATE[$i]}].MemClock=${MEM_CLOCK[$i]}00"
 tek+=" --write-card-pp"
