@@ -61,7 +61,7 @@ tek+=" --set GoldenRevision=9416"
 tek+=" --set PowerTuneTable.TDC=124"
 tek+=" --set PowerTuneTable.BatteryPowerLimit=150"
 tek+=" --set PowerTuneTable.SmallPowerLimit=150"
-tek+=" --set MaximumPowerDeliveryLimit=150"
+tek+=" --set PowerTuneTable.MaximumPowerDeliveryLimit=150"
 
 tek+=" --set VddcLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
 #tek+=" --set VddcLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
