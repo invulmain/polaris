@@ -62,6 +62,7 @@ tek+=" --set PowerTuneTable.TDC=124"
 tek+=" --set PowerTuneTable.BatteryPowerLimit=150"
 tek+=" --set PowerTuneTable.SmallPowerLimit=150"
 tek+=" --set PowerTuneTable.MaximumPowerDeliveryLimit=150"
+tek+=" --set ThermalController.FanMaxRPM=52"
 
 tek+=" --set VddcLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
 #tek+=" --set VddcLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
