@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ver 1
+
 . colors
 
 AMD_OC_CONF="/hive-config/amd-oc.conf"
