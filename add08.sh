@@ -66,6 +66,7 @@ tek+=" --set PowerTuneTable.SmallPowerLimit=150"
 tek+=" --set PowerTuneTable.MaximumPowerDeliveryLimit=150"
 tek+=" --set ThermalController.FanMaxRPM=52"
 
+tek+=" --set FanTable.THyst=1"
 tek+=" --set VddcLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
 #tek+=" --set VddcLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
 tek+=" --set MemClockDependencyTable.Entries[${MEM_STATE[$i]}].Vddc=7"

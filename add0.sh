@@ -60,6 +60,7 @@ echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$
 tekcard=$[$i+1]
 
 tek="/home/user/amdtweak/amdtweak --verbose --card $tekcard --read-card-pp"
+tek+=" --set FanTable.THyst=1"
 tek+=" --set VddcLookupTable.Entries[7].Vdd=${CORE_VDDC[$i]}"
 #tek+=" --set VddcLookupTable.Entries[${FAN[$i]}].Vdd=${CORE_VDDC[$i]}"
 tek+=" --set MemClockDependencyTable.Entries[${MEM_STATE[$i]}].Vddc=7"
