@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ver 2
+# ver 1
 
 . colors
 
@@ -58,7 +58,7 @@ echo -e "\n${YELLOW}===${NOCOLOR} GPU ${CYAN}$i${NOCOLOR}   ${YELLOW}===${NOCOLO
 echo -e "${YELLOW}CORE=${CORE_CLOCK[$i]} VDDC=${CORE_VDDC[$i]} MEM=${MEM_CLOCK[$i]}${NOCOLOR}"
 
 tek="/home/user/amdtweak/amdtweak --verbose --card $i --read-card-pp"
-tek+=" --set FanTable.THyst=2"
+#tek+=" --set FanTable.THyst=2"
 #tek+=" --set FanTable.THigh=6800"
 #tek+=" --set FanTable.PWMHigh=6000"
 #tek+=" --set FanTable.TMax=7000"
