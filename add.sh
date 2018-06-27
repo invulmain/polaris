@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-# ver 2
+# ver 1
 
 . colors
-
-alias a='/home/user/polaris/a.sh'
-alias re='/hive/opt/opendev/watchdog-opendev reset'
 
 AMD_OC_CONF="/hive-config/amd-oc.conf"
 
